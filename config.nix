@@ -17,7 +17,7 @@
     ];
     key_bindings = [
       {
-        key = "Plus";
+        key = "Underline";
         mods = "Control|Shift";
         command = {
           program = "alacritty";
@@ -30,7 +30,7 @@
         };
       }
       {
-        key = "Underline";
+        key = "Plus";
         mods = "Control|Shift";
         command = {
           program = "alacritty";
