@@ -20,7 +20,7 @@
         key = "Plus";
         mods = "Control|Shift";
         command = {
-          program = "~/Repositories/alacritty/result/bin/alacritty";
+          program = "alacritty";
           args = [
             "msg"
             "config"
@@ -33,7 +33,7 @@
         key = "Underline";
         mods = "Control|Shift";
         command = {
-          program = "~/Repositories/alacritty/result/bin/alacritty";
+          program = "alacritty";
           args = [
             "msg"
             "config"
