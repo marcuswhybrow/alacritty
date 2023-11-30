@@ -1,5 +1,5 @@
 {
-  description = "Alacritty terminal configured by Marcus";
+  description = "Marcus' Alacritty terminal";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
