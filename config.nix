@@ -8,16 +8,16 @@
   catppuccin = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "alacritty";
-    rev = "3c808cbb4f9c87be43ba5241bc57373c793d2f17";
-    sha256 = "sha256-w9XVtEe7TqzxxGUCDUR9BFkzLZjG8XrplXJ3lX6f+x0=";
+    rev = "071d73effddac392d5b9b8cd5b4b527a6cf289f9";
+    sha256 = "sha256-HiIYxTlif5Lbl9BAvPsnXp8WAexL8YuohMDd/eCJVQ8=";
   };
   baseConfig = {
     import = [
-      "${catppuccin}/catppuccin-latte.yml"
+      "${catppuccin}/catppuccin-latte.toml"
     ];
-    key_bindings = [
+    keyboard.bindings = [
       {
-        key = "Underline";
+        key = "Minus";
         mods = "Control|Shift";
         command = {
           program = "alacritty";
@@ -63,5 +63,6 @@
   };
 
   finalConfig = pkgs.lib.attrsets.recursiveUpdate baseConfig config;
-  yaml = builtins.toJSON finalConfig; # YAML is a superset of JSON
-in pkgs.writeText "alacritty.yml" yaml
+  configFormat = pkgs.formats.toml {};
+  configFile = configFormat.generate "alacritty.toml" finalConfig;
+in configFile

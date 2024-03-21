@@ -18,12 +18,12 @@
     in ''
       mkdir -p $out/bin
       mkdir -p $out/share
-      ln -s ${config} $out/share/alacritty.yml
+      ln -s ${config} $out/share/alacritty.toml
 
       makeWrapper \
         ${pkgs.alacritty}/bin/alacritty \
         $out/bin/alacritty \
-        --add-flags "--config-file $out/share/alacritty.yml"
+        --add-flags "--config-file $out/share/alacritty.toml"
     '');
 
     packages.x86_64-linux.alacritty = self.overrides.x86_64-linux.alacritty {};
