@@ -24,6 +24,17 @@
         ${pkgs.alacritty}/bin/alacritty \
         $out/bin/alacritty \
         --add-flags "--config-file $out/share/alacritty.toml"
+
+      mkdir -p $out/share/applications
+      cat > $out/share/applications/alacritty.desktop << EOF
+      [Desktop Entry]
+      Version=1.0
+      Name=Alacritty
+      GenericName=A cross-platform, OpenGL terminal emulator.
+      Terminal=false
+      Type=Application
+      Exec=$out/bin/alacritty
+      EOF
     '');
 
     packages.x86_64-linux.alacritty = self.overrides.x86_64-linux.alacritty {};
