@@ -17,7 +17,7 @@
     ];
     keyboard.bindings = [
       {
-        key = "Minus";
+        key = "_";
         mods = "Control|Shift";
         command = {
           program = "alacritty";
