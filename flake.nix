@@ -15,7 +15,7 @@
         config = alacrittyConfig; 
       };
       config = import ./config.nix allArgs;
-    in ''
+    in /* bash */ ''
       mkdir -p $out/bin
       mkdir -p $out/share
       ln -s ${config} $out/share/alacritty.toml
