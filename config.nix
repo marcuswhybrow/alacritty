@@ -15,6 +15,7 @@
     import = [
       "${catppuccin}/catppuccin-latte.toml"
     ];
+    env.TERM = "xterm-256color";
     keyboard.bindings = [
       {
         key = "_";
