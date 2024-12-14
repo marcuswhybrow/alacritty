@@ -4,7 +4,7 @@
 }: let
   fontFamily = "FiraCode Nerd Font";
   padding = 40;
-  opacity = 0.9;
+  opacity = 1;
   catppuccin = pkgs.fetchFromGitHub {
     owner = "catppuccin";
     repo = "alacritty";
